@@ -21,5 +21,4 @@ describe OysterCard do
 
 
   end
-
 end
