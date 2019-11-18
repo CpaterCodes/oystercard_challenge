@@ -33,5 +33,4 @@ describe OysterCard do
       expect(subject.in_journey).to be_truthy
     end
   end
-
 end
