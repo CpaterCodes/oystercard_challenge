@@ -14,9 +14,9 @@ describe OysterCard do
    end
 
    it "Should not push balance above £90" do
-     subject.top_up(10)
-     message = "£90 balance maximum exceeded, transfer cancelled"
-     expect(subject.top_up(90)).to raise_error message
+     subject.top_up(OysterCard::LIMIT)
+     message = "£90 balance maximum exceeded. Balance: #{subject.balance}"
+     expect{subject.top_up 1 }.to raise_error message
    end
   end
 

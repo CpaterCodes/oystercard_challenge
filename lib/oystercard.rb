@@ -7,7 +7,7 @@ LIMIT = 90
   end
 
   def top_up(amount)
-    raise "£90 balance maximum exceeded, transfer cancelled" if self.over_limit?(amount)
+    raise "£90 balance maximum exceeded. Balance: #{@balance}" if self.over_limit?(amount)
     @balance += amount
   end
 
