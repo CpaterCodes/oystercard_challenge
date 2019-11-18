@@ -27,4 +27,11 @@ describe OysterCard do
     end
   end
 
+  describe "#touch_in" do 
+    it "should change the in_journey status to true" do 
+      subject.touch_in
+      expect(subject.in_journey).to be_truthy
+    end
+  end
+
 end

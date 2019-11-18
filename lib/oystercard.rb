@@ -4,6 +4,7 @@ attr_reader :balance
 LIMIT = 90
   def initialize(balance = 0)
     @balance = balance
+    @in_journey = false
   end
 
   def top_up(amount)
@@ -17,5 +18,9 @@ LIMIT = 90
 
   def deduct(fare)
     @balance -= fare
+  end
+
+  def touch_in
+    @in_journey = true
   end
 end
